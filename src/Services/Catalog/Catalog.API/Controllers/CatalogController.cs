@@ -6,8 +6,8 @@ using System.Net;
 
 namespace Catalog.API.Controllers;
 
-[Route("api/[controller]")]
 [ApiController]
+[Route("api/[controller]")]
 public class CatalogController : ControllerBase
 {
 	private readonly IProductRepository _repository;
