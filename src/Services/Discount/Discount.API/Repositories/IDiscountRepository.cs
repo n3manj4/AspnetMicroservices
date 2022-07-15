@@ -2,7 +2,7 @@
 
 namespace Discount.API.Repositories
 {
-	public interface IDiscoutRepository
+	public interface IDiscountRepository
 	{
 		Task<Coupon> GetDiscount(string productName);
 		Task<bool> CreateDiscount(Coupon coupon);

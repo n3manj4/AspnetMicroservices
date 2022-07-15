@@ -8,9 +8,9 @@ namespace Discount.API.Controllers
 	[Route("api/[controller]")]
 	public class DiscountController : ControllerBase
 	{
-		private readonly IDiscoutRepository _repository;
+		private readonly IDiscountRepository _repository;
 
-		public DiscountController(IDiscoutRepository repository)
+		public DiscountController(IDiscountRepository repository)
 		{
 			_repository = repository;
 		}

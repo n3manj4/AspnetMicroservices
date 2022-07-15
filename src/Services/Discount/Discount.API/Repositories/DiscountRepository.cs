@@ -4,7 +4,7 @@ using Npgsql;
 
 namespace Discount.API.Repositories
 {
-	public class DiscountRepository : IDiscoutRepository
+	public class DiscountRepository : IDiscountRepository
 	{
 
 		private readonly IConfiguration _configuration;
