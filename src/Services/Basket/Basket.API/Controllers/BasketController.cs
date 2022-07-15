@@ -6,7 +6,7 @@ namespace Basket.API.Controllers
 {
 	[ApiController]
 	[Route("api/[controller]")]
-	public class BasketController : Controller
+	public class BasketController : ControllerBase
 	{
 		private readonly IBasketRepository _repository;
 
