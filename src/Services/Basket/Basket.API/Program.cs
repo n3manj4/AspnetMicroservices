@@ -13,7 +13,6 @@ builder.Services.AddStackExchangeRedisCache(options =>
 
 builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
 	(o => o.Address = new Uri(builder.Configuration["GrpcSettings:DiscountUrl"]));
-
 builder.Services.AddScoped<DiscountGrpcService>();
 
 builder.Services.AddControllers();

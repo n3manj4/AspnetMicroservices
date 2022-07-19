@@ -21,7 +21,7 @@ if (app.Environment.IsDevelopment())
 	app.UseSwaggerUI();
 }
 
-//app.MigrateDatabase<Program>();
+app.MigrateDatabase<Program>();
 
 app.UseAuthorization();
 
