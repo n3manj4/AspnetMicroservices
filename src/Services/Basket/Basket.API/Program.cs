@@ -21,11 +21,9 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
 builder.Services.AddScoped<DiscountGrpcService>();
 
 // MassTransit-RabbitMQ Configuration
-builder.Services.AddMassTransit(config =>
-{
-	config.UsingRabbitMq((ctx, cfg) =>
-	{
-		cfg.Host("amqp://guest:guest@localhost:5672");
+builder.Services.AddMassTransit(config => {
+	config.UsingRabbitMq((ctx, cfg) => {
+		cfg.Host(builder.Configuration["EventBusSettings:HostAddress"]);
 	});
 });
 
