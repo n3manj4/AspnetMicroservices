@@ -72,6 +72,7 @@ namespace Basket.API.Controllers
 
 			var eventMessage = _mapper.Map<BasketCheckoutEvent>(basketCheckout);
 			eventMessage.TotalPrice = basket.TotalPrice;
+			// TODO: kada se desi excp na klijent strani, kako prekinuti brisanje korpe
 			await _publishEndpoint.Publish(eventMessage);
 
 			await _repository.DeleteBasket(basket.UserName);
